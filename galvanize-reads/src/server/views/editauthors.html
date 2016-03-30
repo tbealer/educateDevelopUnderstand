@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="edit"> 
+
+{% for author in authors %} 
+
+<form  role="form" method="post" action="/authors/{{author.id}}/edit">
+
+
+<h3>First Name:</h3><br>
+<input type="text" value="{{author.firstname}}" name="firstname"><br><br>
+
+<h3>Last Name:</h3><br>
+<input type="text" value="{{author.lastname}}" name="lastname"><br><br>
+
+<h3>Biography:</h3><br>
+<input type="text" value="{{author.biography}}" name="biography"><br><br>
+
+
+<h3>Image URL:</h3><br>
+<input type="text" value="{{author.picture}}" name="picture"><br><br>
+
+
+
+{% endfor %}
+
+
+<button type="submit">Edit author</button>
+
+
+
+</form>
+
+
+
+ <a href="/authors">Cancel</a>
+
+</div>
+
+{% endblock %}

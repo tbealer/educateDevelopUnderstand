@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+
+   
+<div class="edit">
+{% for book in books %} 
+
+<form  role="form" method="post" action="/books/{{book.id}}/edit">
+
+
+<h3>Title:</h3><br>
+<input type="text" value="{{book.title}}" name="title"><br><br>
+
+<h3>Description:</h3><br>
+<input class="form-control input-lg" type="text" value="{{book.description}}" name="description"><br><br>
+
+<h3>Genre:</h3><br>
+<input type="text" value="{{book.genre}}" name="genre"><br><br>
+
+<h3>Year:</h3><br>
+<input type="text" value="{{book.year}}" name="year"><br><br>
+
+<h3>Image URL:</h3><br>
+<input type="text" value="{{book.picture}}" name="picture"><br><br>
+
+
+
+{% endfor %}
+
+
+<button type="submit">Edit Book</button>
+
+
+
+</form>
+
+
+
+ <a href="/books">Cancel</a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+<div class="addauthor"> 
+<a href="/author/new">Add Author</a>  
+</div>
+ {% for author in authors %}
+
+   
+
+<div class="container">
+  <div class="singlebooks">
+    <h3>{{ author.firstname }} {{ author.lastname }}</h3>
+   
+    <p><img src="{{ author.picture }}"></p>
+    <p>{{ author.biography }}</p>
+   
+
+   <form  role="form" method="post" action="/authors/{{author.id}}/remove"><button type="delete">Remove author</button></form>
+    
+
+    <a href="authors/{{author.id}}/edit"<button type="delete">Edit Author</button>
+
+  </div>
+</div>
+
+
+
+ {% endfor %}
+
+ 
+{% endblock %}

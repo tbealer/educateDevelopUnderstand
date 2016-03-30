@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+
+   <div class="edit">
+
+ 
+
+<form  role="form" method="post" action="/books/new">
+
+
+<h3>Title:</h3><br>
+<input type="text" placeholder="Go Dog Go" name="title"><br><br>
+
+<h3>Description:</h3><br>
+<input class="form-control input-lg" type="text" placeholder="The book describes the actions and interactions of a group of highly mobile dogs, who operate cars and other conveyances in pursuit of work, play, and a final mysterious goal: a dog party." name="description"><br><br>
+
+<h3>Genre:</h3><br>
+<input type="text" placeholder="Children's Book" name="genre"><br><br>
+
+<h3>Year:</h3><br>
+<input type="text" placeholder="1961" name="year"><br><br>
+
+<h3>Image URL:</h3><br>
+<input type="text" placeholder="https://upload.wikimedia.org/wikipedia/en/2/24/Go_Dog_Go.jpg" name="picture"><br><br>
+
+<h3>Author:</h3><br>
+<input type="text" placeholder="Dr. Suess" name="author"><br><br>
+
+
+
+
+
+<button type="delete">Add Book</button>
+
+
+
+</form>
+
+
+
+ <a href="/books">Cancel</a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+
+   
+<div class="edit">
+ 
+
+<form  role="form" method="post" action="/authors/new">
+
+
+<h3>First Name:</h3><br>
+<input type="text" placeholder="First Name" name="firstname"><br><br>
+
+<h3>Last Name:</h3><br>
+<input type="text" placeholder="Last Name" name="lastname"><br><br>
+
+<h3>Biography:</h3><br>
+<input type="text" placeholder="Biography" name="biography"><br><br>
+
+
+<h3>Image URL:</h3><br>
+<input type="text" placeholder="https://upload.wikimedia.org/wikipedia/en/2/24/Go_Dog_Go.jpg" name="picture"><br><br>
+
+
+
+
+<button type="delete">Add Book</button>
+
+
+
+</form>
+
+
+
+ <a href="/authors">Cancel</a>
+
+</div>
+
+{% endblock %}
